@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('shopApp',['ui.router', 'ui.bootstrap']);
+		.module('shopApp',['ui.router','ui.bootstrap']);
 
 	angular
 		.module('shopApp')
@@ -29,9 +29,8 @@
 				controller:'AdminCtrl as ctrl',
 				//TODO #2 Resolve Products before admin page load
 				resolve:{
-					products:function(api,$state,productSrv){
+					products:function(productSrv){
 						return productSrv.getProducts();
-						
 					}
 				}
 			})
@@ -53,6 +52,12 @@
 				controller:'ProductCtrl as ctrl',
 				templateUrl:'site/partials/admin-edit-product.html',
 			})
+
+			.state('admin.order',{
+				url:'/viewingOrders',
+				controller:'AdminCtrl as ctrl',
+				templateUrl:'site/partials/admin-view-orders.html',
+			})			
 
 			.state('auth',{
 				url:'/auth',
