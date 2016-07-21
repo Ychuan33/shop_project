@@ -8,8 +8,12 @@
 
 		//TODO #3 Capture resolved products for view
 		shopVm.products=productSrv.products;
+<<<<<<< HEAD
 
 		////////////////
+=======
+		console.log(shopVm.products);
+>>>>>>> origin/master
 		shopVm.singleproduct = {};
 		shopVm.category ='';
 		shopVm.go = function(productId) {
