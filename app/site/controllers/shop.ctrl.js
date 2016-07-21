@@ -8,6 +8,7 @@
 
 		//TODO #3 Capture resolved products for view
 		shopVm.products=productSrv.products;
+		console.log(shopVm.products);
 
 		// productSrv.getProducts()
 		// .then(function(data){

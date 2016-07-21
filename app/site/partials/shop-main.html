@@ -19,20 +19,20 @@
 			<div class="table-cell">
 				<div class="content">		
 					<h1>
-						Manage Your Closet.
+						<!-- Manage Your Closet. -->
 					</h1>
 					<h3>
-						Buy and Sell used fashion items from virtually anywhere.
+						<!-- Buy and Sell used fashion items from virtually anywhere. -->
 					</h3>
 
 					<div class="">
 						<form>
 							<!-- TO DO #3: ENABLE PRODUCT SEARCH -->
-							<div class="form-container">
+							<!-- <div class="form-container">
 								<input type="text" class="form-control"  placeholder="Search for a brand or item" ng-model="ctrl.search" >
 								<a class="search-btn"><img src="assets/img/icon-search@2x.png"
 								 ></a>
-							</div>
+							</div> -->
 						</form>
 					</div>
 				</div>
@@ -73,7 +73,7 @@
 					</div>
 					<!-- SET PRODUCT IMAGE -->
 					<div ng-click="ctrl.addCart(product.id)"
-						class="product-img" style="background:url({{product.image}});background-size:cover;background-position:center center">
+						class="product-img" style="background:url('{{product.image}}');background-size:cover;background-position:center center">
 					</div>
 
 					<div class="product-info">
