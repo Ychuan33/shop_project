@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('shopApp',['ui.router']);
+		.module('shopApp',['ui.router', 'ui.bootstrap']);
 
 	angular
 		.module('shopApp')
@@ -29,8 +29,9 @@
 				controller:'AdminCtrl as ctrl',
 				//TODO #2 Resolve Products before admin page load
 				resolve:{
-					products:function(productSrv){
+					products:function(api,$state,productSrv){
 						return productSrv.getProducts();
+						
 					}
 				}
 			})
