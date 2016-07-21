@@ -1,6 +1,6 @@
 (function(){
 	'use strict';
-	
+
 	angular
 		.module('shopApp',['ui.router','ui.bootstrap']);
 

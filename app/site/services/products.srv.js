@@ -8,53 +8,6 @@
 		var self = this;
 		//public variables
 		self.products = [];
-		
-		var newprod = [
-		
-		{
-		    name: "Blue Plaid",
-		    description: "Button-down collar.",
-		    category: "Shirts",
-		    price: "$99.99",
-		    quantity: "5",
-		    image: "assets/img/shirts/blue_plaid_shirt.jpg",
-		    status: "active",
-		 }, 
-
-		 {
-		    name: "Blue Dot",
-		    description: "Button-down collar.",
-		    category: "Shirts",
-		    price: "$99.99",
-		    quantity: "4",
-		    image: "assets/img/shirts/blue_dot_shirt.jpg",
-		    status: "active",
-		 },
-		 
-		 {
-		    name: "Charcoal Gingham",
-		    description: "Button-down collar.",
-		    category: "Shirts",
-		    price: "$99.99",
-		    quantity: "6",
-		    image: "assets/img/shirts/blue_dot_shirt.jpg",
-		    status: "active",
-		 },
-
-    ];
-
-    getProducts().then(function(){
-    	if (self.products.length == 0){
-    		for (var i = 0; i < newprod.length; i++){
-    			addProduct(newprod[i]);
-    		}
-    	
-    	}
-    	getProducts();
-    	// console.log("added");
-    })
-    
-		
 
 		//public functions
 		self.getProduct = getProduct;
