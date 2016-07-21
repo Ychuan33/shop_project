@@ -9,7 +9,7 @@
 		//TODO #3 Capture resolved products for view
 		shopVm.products=productSrv.products;
 		shopVm.singleproduct = {};
-		shopVm.category;
+		shopVm.category = '';
 
 		// productSrv.getProducts()
 		// .then(function(data){

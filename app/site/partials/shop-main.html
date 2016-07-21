@@ -29,7 +29,7 @@
 						<form>
 							<!-- TO DO #3: ENABLE PRODUCT SEARCH -->
 							<div class="form-container">
-								<input type="text" class="form-control"  placeholder="Search for a brand or item" ng-model="ctrl.search">
+								<input type="text" class="form-control"  placeholder="Search for a brand or item" ng-model="search">
 								<a class="search-btn"><img src="assets/img/icon-search@2x.png"></a>
 							</div>
 						</form>
@@ -62,7 +62,7 @@
 			<!-- TODO #3: SHOW PRODUCTS -->
 			<div class="col-xs-12 col-sm-3" ng-repeat="product in ctrl.products 
 			| filter:{name:search} 
-			| filter:{category:ctrl.category}">
+			| filter:{category:product.category}">
 
 				<div id="product-card" class="product-card" ng-click="ctrl.go(product.id)">
 					<div class="product-buy">
