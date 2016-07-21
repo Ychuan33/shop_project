@@ -3,7 +3,6 @@
 		.module('shopApp')
 		.controller('CheckoutCtrl',CheckoutCtrl);
 
-<<<<<<< Updated upstream
 function CheckoutCtrl($scope,$state,items,cartSrv){
 
 	var checkVm=this;
@@ -14,10 +13,3 @@ function CheckoutCtrl($scope,$state,items,cartSrv){
 
 }
 })();
-=======
-		function CheckoutCtrl(){
-
-		}
-	}
-)();
->>>>>>> Stashed changes
