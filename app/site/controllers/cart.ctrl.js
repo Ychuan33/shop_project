@@ -3,13 +3,15 @@
     .module('shopApp')
     .controller('ModalInstanceCtrl',ModalInstanceCtrl)
 
-  function ModalInstanceCtrl($scope, $uibModalInstance, items, cartSrv) {
+  function ModalInstanceCtrl($scope, $state, $uibModalInstance, items, cartSrv) {
     var modalVm = this;
 
     modalVm.items = cartSrv.items;
 
     modalVm.ok = function () { // checkout function
-      $uibModalInstance.close();
+     console.log ("hello")
+     $state.go('checkout');
+     
     };
 
     modalVm.cancel = function () {

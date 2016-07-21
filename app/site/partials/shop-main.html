@@ -65,7 +65,7 @@
 			| filter:{category:category}">
 
 				<div id="product-card" class="product-card" ng-click="ctrl.go(product.id)">
-					<div class="product-buy">
+					<div class="product-buy" ng-click ="ctrl.addProduct(item)">
 						<div class="table-view">
 							<div class="table-cell">
 								<i ng-click="ctrl.addCart(product.id)" class="fa fa-shopping-cart"></i>
