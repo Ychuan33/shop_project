@@ -13,11 +13,11 @@
 		if(localStorage.authToken == undefined || localStorage.authToken == null){
 			$state.go('auth');
 		}
-					
-		adminVm.products;
-		// if(adminVm.products.length > 0 ){
-		// 	adminVm.is_products = true;
-		// }
+		//			
+		adminVm.products = productSrv.products;
+		 if(adminVm.products.length > 0 ){
+			adminVm.is_products = true;
+		  }
 
 		//watch for updates to products object
 		$scope.$watch(function(){

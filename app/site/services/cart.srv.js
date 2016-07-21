@@ -14,6 +14,8 @@
         		self.items.push(product)
         	}
 
+            
+
         	//Display Items In Cart
         	// cart controller:
         		//ctrl.cart = cartSrv.items
@@ -22,6 +24,8 @@
         	// Cart.HTML
         	// ng-repeat = "item in ctrl.cart"
         		//display controller cart in html
+
+
         	
         	//Adding Product to Cart
         	//main product page HTML
