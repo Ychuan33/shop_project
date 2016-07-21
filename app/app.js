@@ -23,13 +23,26 @@
 				}
 			})
 
+			.state('details',{
+				url:'/details/:id',
+				templateUrl:'site/partials/details.html',
+				controller:'DetailsCtrl as ctrl',
+				//TODO #3 resolve products before main page load
+				resolve:{
+					products:function(productSrv, $stateParams){
+						console.log($stateParams)
+						return productSrv.getProduct($stateParams.id);
+					}
+				}
+			})
+
 			.state('admin',{
 				url:'/admin',
 				templateUrl:'site/partials/admin.html',
 				controller:'AdminCtrl as ctrl',
 				//TODO #2 Resolve Products before admin page load
 				resolve:{
-					products:function(productSrv){
+					products:function($state,api){
 						return productSrv.getProducts();
 					}
 				}
@@ -63,6 +76,12 @@
 				url:'/auth',
 				templateUrl:'site/partials/auth-main.html',
 				controller:'AuthCtrl as ctrl',
+			})
+
+			.state('checkout', {
+				url:'/checkout',
+				templateUrl: 'site/partials/checkout.html',
+				controller:'CheckoutCtrl as ctrl'
 			});
 
 			$httpProvider.interceptors.push(function(){

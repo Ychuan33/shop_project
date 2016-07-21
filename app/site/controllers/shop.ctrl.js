@@ -3,12 +3,14 @@
 		.module('shopApp')
 		.controller('ShopCtrl',ShopCtrl)
 
-	function ShopCtrl($scope,productSrv,products,cartSrv){
+	function ShopCtrl($scope,$state,productSrv,products,cartSrv){
 		var shopVm = this;
 
 		//TODO #3 Capture resolved products for view
 		shopVm.products=productSrv.products;
 		console.log(shopVm.products);
+		shopVm.singleproduct = {};
+		shopVm.category = '';
 
 		// productSrv.getProducts()
 		// .then(function(data){
@@ -37,7 +39,12 @@
 
 		// 	)
 
-		
+		shopVm.go = function(productId) {
+
+			console.log(productId);
+			$state.go('details',{id: productId});
+			// $state.go('admin');
+		};
 
 		shopVm.openCart = function(){
 			cartSrv.open();

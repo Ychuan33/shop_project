@@ -7,7 +7,7 @@
 			<li >
 				<i ng-click="ctrl.openCart()" class="fa fa-shopping-cart">
 				<span class="cart">Cart</span></i>
-				<a ui-sref="auth" class="cart">LogIn</a>
+				<a ui-sref="auth" class="cart">Log In</a>
 			</li>
 		</ul>
 	</div>
@@ -28,11 +28,10 @@
 					<div class="">
 						<form>
 							<!-- TO DO #3: ENABLE PRODUCT SEARCH -->
-							<!-- <div class="form-container">
-								<input type="text" class="form-control"  placeholder="Search for a brand or item" ng-model="ctrl.search" >
-								<a class="search-btn"><img src="assets/img/icon-search@2x.png"
-								 ></a>
-							</div> -->
+							<div class="form-container">
+								<input type="text" class="form-control"  placeholder="Search for a brand or item" ng-model="search">
+								<a class="search-btn"><img src="assets/img/icon-search@2x.png"></a>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -46,12 +45,12 @@
 	<div class="content-wrapper">
 		<!-- TO DO #3: SET CATEGORY SEARCH AND SET FOCUS CLASS-->
 		<ul class="product-nav">
-			<li ><a>All</a></li>
-			<li ><a>Shoes</a></li>
-			<li ><a>Shirts</a></li>
-			<li ><a>Pants</a></li>
-			<li ><a>Outerwear</a></li>
-			<li ><a>Accessories</a></li>
+			<li ng-class="{'focus':category == ''}" ng-click="category = ''"><a>All</a></li>
+			<li ng-class="{'focus':category == 'shoes'}" ng-click="category = 'shoes'"><a>Shoes</a></li>
+			<li ng-class="{'focus':category == 'shirts'}" ng-click="category = 'shirts'"><a>Shirts</a></li>
+			<li ng-class="{'focus':category == 'pants'}" ng-click="category = 'pants'"><a>Pants</a></li>
+			<li ng-class="{'focus':category == 'outerwear'}" ng-click="category = 'outerwear'"><a>Outerwear</a></li>
+			<li ng-class="{'focus':category == 'accessories'}" ng-click="category = 'accessories'"><a>Accessories</a></li>
 		</ul>
 	</div>
 </section>
@@ -61,9 +60,11 @@
 	<div class="content-wrapper">
 		<div class="row">
 			<!-- TODO #3: SHOW PRODUCTS -->
-			<div class="col-xs-12 col-sm-3" ng-repeat="product in ctrl.products |filter:ctrl.search">
+			<div class="col-xs-12 col-sm-3" ng-repeat="product in ctrl.products 
+			| filter:{name:search} 
+			| filter:{category:category}">
 
-				<div id="product-card" class="product-card" >
+				<div id="product-card" class="product-card" ng-click="ctrl.go(product.id)">
 					<div class="product-buy">
 						<div class="table-view">
 							<div class="table-cell">
