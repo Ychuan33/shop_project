@@ -80,7 +80,7 @@
 
 			.state('checkout', {
 				url:'/checkout',
-				templateUrl: 'site/partials/checkout.html'
+				templateUrl: 'site/partials/checkout.html',
 				controller:'CheckoutCtrl as ctrl'
 			});
 
