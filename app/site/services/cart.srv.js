@@ -22,8 +22,6 @@
         	// Cart.HTML
         	// ng-repeat = "item in ctrl.cart"
         		//display controller cart in html
-
-
         	
         	//Adding Product to Cart
         	//main product page HTML
