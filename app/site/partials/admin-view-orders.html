@@ -1,5 +1,4 @@
 <h4>Orders</h4>
-
 	<table class="products-list table">
 		<tr>
 			<th>Category</th>
@@ -8,12 +7,12 @@
 			<th>Quantity</th>
 			<th>&nbsp;</th>
 		</tr>
-		<tr ng-repeat="product in ctrl.products">
-			<td>{{product.category}}</td>
-			<td>{{product.name}}</td>
-			<td>{{product.price}}</td>
-			<td>{{product.quantity}}</td>
-			<td><a ng-click="ctrl.editProduct(product)">Edit</a>
+		<tr ng-repeat="item in ctrl.items">
+			<td>{{item.category}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.price}}</td>
+			<td>{{item.quantity}}</td>
+			<td><a >Edit</a>
 			</td>
 
 		</tr>

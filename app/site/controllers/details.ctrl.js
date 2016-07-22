@@ -3,12 +3,12 @@
 		.module('shopApp')
 		.controller('DetailsCtrl',DetailsCtrl)
 
-	function DetailsCtrl($scope,productSrv,$state,products){
+	function DetailsCtrl(productSrv,$stateParams,api){
 		var detailsVm = this;
 
-		detailsVm.details = products.data;
+		detailsVm.id = $stateParams.productId;
+		detailsVm.product=productSrv.getProduct(detailsVm.id );
 
-		console.log(detailsVm.details);
 
 	}	
 

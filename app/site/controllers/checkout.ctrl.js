@@ -3,7 +3,6 @@
 		.module('shopApp')
 		.controller('CheckoutCtrl',CheckoutCtrl)
 
-
 	function CheckoutCtrl($scope,$state,productSrv,cartSrv){
 		var checkVm = this;
 
@@ -25,5 +24,3 @@
 
 
 })();
-
-

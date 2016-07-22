@@ -30,16 +30,16 @@
 			})		
 
 			.state('details',{
-				url:'/details/:id',
+				url:'/details/:productId',
 				templateUrl:'site/partials/details.html',
 				controller:'DetailsCtrl as ctrl',
 				//TODO #3 resolve products before main page load
-				resolve:{
-					products:function(productSrv, $stateParams){
-						console.log($stateParams)
-						return productSrv.getProduct($stateParams.id);
-					}
-				}
+				// resolve:{
+				// 	products:function(productSrv, $stateParams){
+				// 		console.log($stateParams)
+				// 		return productSrv.getProduct($stateParams.id);
+				// 	}
+				// }
 			})			
 
 			.state('checkout', {
@@ -82,7 +82,7 @@
 
 			.state('admin.order',{
 				url:'/viewingOrders',
-				controller:'AdminCtrl as ctrl',
+				controller:'ViewCtrl as ctrl',
 				templateUrl:'site/partials/admin-view-orders.html',
 			})			
 

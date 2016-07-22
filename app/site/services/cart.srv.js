@@ -4,14 +4,14 @@
         .module('shopApp')
         .service('cartSrv', cartService)
 
-        function cartService($uibModal){
+        function cartService($uibModal,api,$state){
         	var self = this;
 
         	self.items = [];
             self.addProduct=addProduct;
 
         	function addProduct(product){
-        		self.items.push(product)
+            self.items.push(product)
         	}
 
             

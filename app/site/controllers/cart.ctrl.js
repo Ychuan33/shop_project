@@ -7,6 +7,7 @@
     var modalVm = this;
 
     modalVm.items = cartSrv.items;
+    
 
     modalVm.ok = function () { // checkout function
       console.log ("hello")

@@ -1,20 +1,42 @@
 <h3>Product Details</h3>
 
-<div>
-<div class="product-img" style="background:url('/assets/img{{product.image}}');background-size:cover;background-position:center center">
+<!-- <div>
+<div class="product-img" style="background:url({{product.image}});background-size:cover;background-position:center center">
 </div>
-
-
-
 	<table class="products-list table">
 			<tr>
-			<td>{{ctrl.details.product.category}}</td>
-			<td>{{ctrl.details.product.name}}</td>
-			<td><em>{{ctrl.details.product.description}}</em></td>
-			<td>{{ctrl.details.product.price |currency}}</td>
+			<td>{{ctrl.product.category}}</td>
+			<td>{{ctrl.product.name}}</td>
+			<td><em>{{ctrl.product.description}}</em></td>
+			<td>{{ctrl.product.price |currency}}</td>
 		</tr>
 	</table>
-</div>
+</div> -->
+{{ctrl.product}}
+{{ctrl.id}}
+<h1 class="text-center">
+  <!--TODO #4: Show the movie title here-->
+    {{ctrl.product.name}}
+  </h1>
+
+  <div class="row">
+    <div class="col-xs-5">
+      <!--TODO #4: Show the movie poster image here-->
+      <img  ng-src="{{ctrl.product.image}}">
+    </div>
+    <div class="col-xs-7">
+      <table class="table">
+        <!--TODO #4: Show all the fields from the movie object in this table-->
+        <tr ng-repeat="(key, value) in ctrl.product">
+          <td>
+            {{(key)}}:   {{value}}
+          </td>
+        </tr>
+      </table>
+    </div>    
+  </div>
+
+
 
 	<div class="text-center">
 		<div class="row">
