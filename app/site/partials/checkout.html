@@ -3,13 +3,14 @@
 <div>
     <table class="table">
         <tr>
+            <th></th>
             <th>Name</th>
             <th>Qty</th>
             <th>Price</th>
             <th>Total</th>
             <th></th>
         </tr>
-        <tr ng-repeat="item in ctrl.items">
+        <tr class="tablest" ng-repeat="item in ctrl.items">
             <td><img ng-src="{{item.image}}"/></td>
             <td>{{item.name}}</td>     
             <td>{{item.quantity}}</td>
@@ -17,12 +18,12 @@
             <td>{{item.quantity * item.price | currency}}</td>
             
         </tr>
-        <tr>
-            
+        <tr>           
             <td></td>
             <td>Total $: {{ctrl.Total}}</td>
             <td>{{total() | currency}}</td>
             <td>Total after tax $: {{ctrl.totalAfterTax}}</td>
         </tr>
     </table>
+     <button class="btn btn-primary paybtn" type="button" ng-click="ctrl.ok()">PayNow</button>
 </div>
