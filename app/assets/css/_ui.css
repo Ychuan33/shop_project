@@ -225,3 +225,27 @@ Product view
 	margin:10px 0px;
 }
 
+/*
+Cart View
+*/
+.modal-body img {
+	height: 170px;
+	width: 170px;
+}
+.modal-body{
+	font-family: 'Merriweather', serif !important;
+}
+
+/*
+Checkout View
+*/
+.table img {
+	height: 200px;
+	width: 200px;
+}
+.table {
+	font-family: 'Merriweather', serif !important;
+}
+
+}
+

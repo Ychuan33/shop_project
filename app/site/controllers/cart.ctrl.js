@@ -12,11 +12,17 @@
     modalVm.ok = function () { // checkout function
       console.log ("hello")
      $state.go('checkout');
+     $uibModalInstance.dismiss('checkout');
     };
 
-    modalVm.cancel = function () {
-      $uibModalInstance.dismiss('cancel');
-    };
+     modalVm.cancel = function () {
+       $uibModalInstance.dismiss('cancel');
+     };
+
+     
+  
+
+    
   }
 
 })();

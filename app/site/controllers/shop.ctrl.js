@@ -55,7 +55,7 @@
 		shopVm.addCart = function(product){
 
 			cartSrv.addProduct(product);
-			alert("Congraduations!!");
+			alert("Congraluations!!");
 
 		}
 
