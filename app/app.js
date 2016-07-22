@@ -30,16 +30,15 @@
 			})		
 
 			.state('details',{
-				url:'/details/:productId',
+				url:'/details/:id',
 				templateUrl:'site/partials/details.html',
 				controller:'DetailsCtrl as ctrl',
-				//TODO #3 resolve products before main page load
-				// resolve:{
-				// 	products:function(productSrv, $stateParams){
-				// 		console.log($stateParams)
-				// 		return productSrv.getProduct($stateParams.id);
-				// 	}
-				// }
+				resolve:{
+					products:function(productSrv, $stateParams){
+						console.log($stateParams)
+						return productSrv.getProduct($stateParams.id);
+					}
+				}
 			})			
 
 			.state('checkout', {

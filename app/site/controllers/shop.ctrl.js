@@ -53,9 +53,9 @@
 		}
 
 		shopVm.addCart = function(product){
-			console.log("adding");
+
 			cartSrv.addProduct(product);
-			//alert("Congraluations!!");
+			alert("adding!!");
 
 		}
 

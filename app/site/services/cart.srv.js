@@ -4,7 +4,7 @@
         .module('shopApp')
         .service('cartSrv', cartService)
 
-        function cartService($uibModal,api,$state){
+        function cartService($uibModal,$state){
         	var self = this;
 
         	self.items = [];

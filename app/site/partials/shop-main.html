@@ -7,7 +7,7 @@
 		<ul class="right-nav">
 
 			<li >
-				<a ui-sref="auth" class="cart">LogIn</a>
+				<a ui-sref="auth" class="cart" style="font-size:20px;color:gray">LogIn</a>
 				<i ng-click="ctrl.openCart()" class="fa fa-shopping-cart" style="position:fixed;z-index:99999;margin-left:150px">
 			<span class="cart">Cart</span></i>
 			</li>
@@ -70,9 +70,9 @@
 
 				<div id="product-card" class="product-card" >
 					<div class="product-buy">
-						<div ng-click="ctrl.addCart(product)" class="table-view">
+						<div class="table-view">
 							<div class="table-cell">
-								<i  class="fa fa-shopping-cart"></i>
+								<i ng-click="ctrl.addCart(product)" class="fa fa-shopping-cart"></i>
 							</div>
 						</div>
 					</div>

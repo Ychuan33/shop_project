@@ -2,28 +2,34 @@
 
 <div>
     <table class="table">
-        <tr>
-            <th></th>
+        <tr style="font-size:15px">
             <th>Name</th>
             <th>Qty</th>
             <th>Price</th>
             <th>Total</th>
             <th></th>
         </tr>
-        <tr class="tablest" ng-repeat="item in ctrl.items">
+        <tr ng-repeat="item in ctrl.items" style="font-size:15px">
             <td><img ng-src="{{item.image}}"/></td>
-            <td>{{item.name}}</td>     
-            <td>{{item.quantity}}</td>
+            <td>{{item.name}}</td>           
+            <td>1</td>
             <td>{{item.price}}</td>
-            <td>{{item.quantity * item.price | currency}}</td>
-            
+            <td>{{ item.price | currency}}</td>
+            <td>
+            </td>
         </tr>
-        <tr>           
+        <tr>
+            
             <td></td>
-            <td>Total $: {{ctrl.Total}}</td>
-            <td>{{total() | currency}}</td>
-            <td>Total after tax $: {{ctrl.totalAfterTax}}</td>
+            <td><h5 style="color:grey;">Total $: <span style="color:red;">{{ctrl.Total}}</span></h5></td>
+            <!-- <td>{{total() | currency}}</td> -->
+            <td><h5 style="color:grey;">Total after tax: <span style="color:red;">{{ctrl.totalAfterTax|currency}}</span></h5></td>
+
         </tr>
     </table>
-     <button class="btn btn-primary paybtn" type="button" ng-click="ctrl.ok()">PayNow</button>
+    <center>
+        <button class="btn btn-primary paybtn"  type="button" ng-click="ctrl.ok()">PayNow</button>
+    </center>
 </div>
+
+<a href="/#/shop-main" class="btn btn-warning">Continue Shopping</a>

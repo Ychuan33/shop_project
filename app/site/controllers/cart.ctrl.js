@@ -15,14 +15,9 @@
      $uibModalInstance.dismiss('checkout');
     };
 
-     modalVm.cancel = function () {
-       $uibModalInstance.dismiss('cancel');
-     };
-
-     
-  
-
-    
+    modalVm.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
   }
 
 })();

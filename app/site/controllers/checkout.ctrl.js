@@ -7,15 +7,14 @@
 		var checkVm = this;
 
 		checkVm.items = cartSrv.items;
-		console.log (checkVm.items);
 		checkVm.getTotal = getTotal;
-		checkVm.Total = checkVm.getTotal();
-		checkVm.totalAfterTax = checkVm.Total * 1.13;
+		checkVm.Total = checkVm.getTotal() ;
+		checkVm.totalAfterTax=checkVm.Total*1.13;
 
 	 	function getTotal() {
 	 		var totalCost = 0;
 	 		for  (var i=0; i<checkVm.items.length; i++){
-	 			 totalCost += checkVm.items[i].price * checkVm.items[i].quantity
+	 			totalCost += checkVm.items[i].price 
 			
 	 		}
 	 		return totalCost;
