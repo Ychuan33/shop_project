@@ -1,6 +1,7 @@
 (function(){
 	angular
 		.module('shopApp')
+<<<<<<< Updated upstream
 		.controller('CheckoutCtrl',CheckoutCtrl)
 
 	function CheckoutCtrl($scope,$state,productSrv,cartSrv){
@@ -24,3 +25,23 @@
 
 
 })();
+=======
+		.controller('CheckoutCtrl',CheckoutCtrl);
+
+function CheckoutCtrl($scope,$state,items,cartSrv){
+
+	var checkVm=this;
+
+
+
+
+
+}
+})();
+
+// 		function CheckoutCtrl(){
+
+// 		}
+	
+// ();
+>>>>>>> Stashed changes
