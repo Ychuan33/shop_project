@@ -21,7 +21,7 @@ app.use('/api/products',product_routes);
 
 //start server and database
 models.sequelize.sync().then(function(){
-	app.listen(8080,function(){
+	app.listen(80,function(){
 		console.log('Listening on http://localhost:8080');
 		console.log('Stop Server With CTRL + C');
 	});
