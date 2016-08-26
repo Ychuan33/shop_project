@@ -53,16 +53,15 @@
 		}
 
 		shopVm.addCart = function(product){
-
 			cartSrv.addProduct(product);
+<<<<<<< Updated upstream
 			alert("adding!!");
 
+=======
+>>>>>>> Stashed changes
 		}
 
-		
-
-
-
+	
 	}
 
 })();

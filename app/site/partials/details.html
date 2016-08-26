@@ -1,8 +1,14 @@
+<<<<<<< Updated upstream
 <h1 style="color:black">Product Details</h1>
 
 
 
 <h2> {{ctrl.details.product.name}}</h2>
+=======
+	<h3>Product Details</h3>
+
+	<h4></h4>
+>>>>>>> Stashed changes
 
 <div class="row">
   <div class="col-xs-5">
@@ -10,6 +16,7 @@
           max-width: 300px; margin-left:50px" ng-src="{{ctrl.details.product.image}}">
   </div>
 
+<<<<<<< Updated upstream
   <div class="col-xs-7">
     <table class="products-list table" style="font-size:30px;margin-left:-100px">
             <tr>
@@ -36,3 +43,22 @@
   </div>  
 
 
+=======
+	<table class="products-list table">
+			<tr> 
+			<td>{{ctrl.details.product.category}}</td>
+			<td>{{ctrl.details.product.name}}</td>
+			<td><em>{{ctrl.details.product.description}}</em></td>
+			<td>{{ctrl.details.product.price |currency}}</td>
+		</tr>
+	</table>
+
+	<div class="text-center">
+		<div class="row">
+			<div class=buttons class="text-center">
+			<button class="btn btn-primary" type="button" ng-click="ctrl.addCart(ctrl.details.product)">Add to Cart</button>
+			<a href="/#/shop-main" class="btn btn-warning">Continue Shopping</a>
+		</div>
+	</div>
+</div>
+>>>>>>> Stashed changes
